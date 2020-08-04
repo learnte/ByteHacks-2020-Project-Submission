@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+<title>HTML5 Local Storage Project</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="rating" content="General">
+<meta name="expires" content="never">
+<meta name="language" content="English, EN">
+<meta name="description" content="Shopping cart">
+<meta name="keywords" content="HTML5,CSS,JavaScript, html5 session storage, html5 local storage">
+<script src="storage.js"></script>
+<script
+language="javascript"
+type="text/javascript">
+function windowClose() {
+window.open('','_parent','')
+;
+ClearAll();
+window.close();
+}
+</script>
+<link rel="stylesheet" href="StorageStyle.css">
+
+<style>
+.put-border{
+	background-color: blue;
+	color: white;
+	padding: 16px 20px;
+	top: 17px;
+	right: 28px;
+	width: 280px;
+}
+</style>
+</head>
+
+
+<body>
+<img src="trade.png" height="600px" width="1350" alt = "trading image">
+
+<font size =+3?><p id = "shopHeader">Please press begin to activate your account:</p></font>
+<table >
+	<tr >
+		<th class = "put-border"onClick = "activate()"> Begin </th>
+	</tr>
+
+</table>
+<br><center><b><big>Food:</big></b></center>
+  <p align = "center">- apple<p>
+  <p align = "center">     - potatoes<p>
+  <p align = "center">     - 10 oz of flour<p>
+  <p align = "center">     - banana<p>
+  <p align = "center">     - fish<p>
+   <p align = "center">     - water<p>
+
+<center><b><big>Essentials:</big></b></center>
+  <p align = "center">     - 3 ft by 3ft cloth<p>
+  <p align = "center">     - a pair of scissors<p>
+  <p align = "center">     - piece of lumber<p>
+  <p align = "center">     - sewing needle<p>
+  <p align = "center">     - mining axe<p>
+  <p align = "center"><p>
+
+<form name="ShoppingList">
+    <fieldset>
+        <legend>Shopping cart</legend>
+        <label>Good(from the menu above):</label>
+		 <select name="name">
+			<option value = "0"selected disabled></option>
+			<option value = "Apples">Apples</option>
+			<option value = "Potatoes">Potatoes</option>
+			<option value = "Flour">Flour</option>
+			<option value = "Banana">Banana</option>
+			<option value = "Fish">Fish</option>
+			<option value = "Water">Water</option>
+			<option value = "3 ft by 3ft cloth">3 ft by 3ft cloth</option>
+			<option value = "Scissors">A pair of scissors</option>
+			<option value = "Lumber">Piece of lumber</option>
+			<option value = "sewing needle">Sewing needle</option>
+			<option value = "mining axe">Mining axe</option>
+			
+		</select>		 
+        <label>Quantity(number): <input type="text" name="data"></label>
+
+        <input type="button" value="Save"   onclick="SaveItem()">
+        <input type="button" value="Change" onclick="ChangeItem()">
+        <input type="button" value="Delete" onclick="RemoveItem()">
+    </fieldset>
+    <div id="items_table">
+        <h2 id = "cartHeader">Shopping List</h2>
+        <table id="list"></table>
+        <label><input type="button" value="Clear" onclick="ClearAll()">
+        * Clear the whole cart</label>
+    </div>
+</form>
+
+<input type="button"
+value="Close this window"
+onclick="windowClose();">
+<body>
+</html> 
