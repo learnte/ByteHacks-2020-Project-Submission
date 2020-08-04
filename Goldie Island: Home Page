@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html>
+
+
+
+	<img src="GoldRush2.png" height="600px" width="1350" alt = "gold rush image"> <!--THIS IS THE CODE FOR THE IMAGE-->
+
+
+
+
+<head>
+		<title>Goldie Island</title> <!--THIS IS THE TITLE FOR THE TAB ABOVE -->
+<head/>
+
+<body>
+	<h1><big>Goldie Island: The Ultimate Tool for the Gold Rush<big></h1> <!--THIS IS THE TITLE HEADING -->
+	<p1> Welcome to Goldie Island, the website that might very much lead all Gold miners and traders to their success.
+	With an online trading site, traders can all advertise their products more easily and efficiently. Along
+	with that, the Goldie Island website provides a map of unclaimed and claimed digging sites, saving miners precious time to search for REAL treasure. You're just a click away from finding your fortune by using Goldie Island.</p1><!--THIS IS THE FIRST PARAGRAPH FOLLOWING THE 1ST HEADING -->
+	
+	
+	<h2> Getting Started</h2><!--THE SECOND HEADING -->
+	<p2> To begin initiating your path with Goldie Island, first set up a username and password for your account.Click the button below to get started.</p2><!--PARAGRAPH THAT GOES ALONG WITH THIS HEADING -->
+	
+
+	
+	
+	<form method="post" action="#" align="center" ><!--THE "ACTION" DECIDES WHERE USERNAMES/PASSWORDS ARE SENT TO, "CENTER" KEEPS THE SIGN UP ALIGNED IN THE CENTER. -->
+	
+		<table border="5" align="center" bgcolor="gray"><!--YOU CAN CHANGE THE BORDER SIZE BY CHANGING THE NUMBER "5". YOU CAN ALSO CHANGE THE TABLE'S COLOR TO SOMETHING ELSE OHER THAN GREY. -->
+			<tr>
+				<td><input placeholder="Enter your name" required></td> <!--THE CODE FOR THE USERNAME -->
+			</tr>
+			<tr>
+				<td><input type="text" placeholder="Enter your email/username" id = "username" required></td><!--THE CODE FOR THE EMAIL/USERNAME -->
+			</tr>
+			<tr>
+				<td><input type="password" placeholder="Enter your password" required id = "password"></td><!--THE CODE FOR THE PASSWORD -->
+			</tr>
+			<tr>
+				<td>
+					<input type="radio" name="Job" value = "trader">Trader/Seller<!--THESE 2 LINES WITH "RADIO" ARE THE CODING BLOCKS FOR THE TWO LITTLE DOTS THAT YOU CAN CLICK -->
+					<input type="radio" name="Job" value = "miner">Gold Miner
+				</td>
+			</tr>
+			<tr>
+				<td onclick = "createAcct()">Process</td><!--THE SUBMIT BUTTON -->
+			</tr>
+
+		</table>
+		
+		<a id = "nextPage" href = "map.html"></a>
+		
+		
+		<script>
+		
+		var users = [];
+		function createAcct() {
+			
+			var inp = document.getElementById("username").value;
+			
+			var ele = document.getElementsByName('Job'); 
+			var checkedBox;
+              
+            for(i = 0; i < ele.length; i++) { 
+                if(ele[i].checked) 
+					checkedBox = ele[i].value; 
+            } 
+
+			var len = users.push ({
+				names: inp,
+				passwords: document.getElementById("password").value,
+				jobs: checkedBox
+			});
+			
+			//alert(users[0].names);
+			console.log(users[0].names);
+			console.log(users[0].passwords);
+			console.log(users[0].jobs);
+			sessionStorage.setItem("unp", JSON.stringify(users));
+			document.getElementById("nextPage").innerHTML = "Submit";
+		}
+		</script>
+	</form>
+	
+	
+<h2> <b> Already signed up? Log in below! <b><!--THE TEXT THAT IS RIGHT BELOW THE SECOND PARAGRAPH -->
+
+	
+	<table border="2" align="center" bgcolor="gray"><!--CHANGE THE NUMBER "2" TO CHANGE BORDER SIZE. ALIGN="CENTER" KEEPS THE TABLE IN THE CENTER. BGCOLOR CONTROLS THE TABLE'S COLOR-->
+
+			<tr>
+				<td><small>Username</small></td><!--THE CODING BLOCKS FOR THE USERNAME -->
+				<td><input type="text"><td>
+			</tr>
+			
+			<tr>
+				<td><small>Password</small></td><!--THE CODING BLOCKS FOR THE PASSWORD -->
+				<td><input type="text"></td>
+			<tr>
+				<td></td>
+			<td><button type="submit">Log in</button></td><!--THE CODING BLOCKS FOR THE LOG IN BUTTON-->
+			
+	</table>
+
+
+
+
+
+</html>
