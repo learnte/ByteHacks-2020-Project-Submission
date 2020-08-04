@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+
+<img src="mapImg.png" height="600px" width="1350" alt = "map image">
+
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 15px;
+}
+
+.nextShop {
+	background-color: yellow;
+	color: white;
+	padding: 16px 20px;
+	position: fixed;
+	top: 17px;
+	right: 28px;
+	width: 280px;
+}
+</style>
+</head>
+<body>
+
+<!INITIALIZE TABLE WITH ROWS AND COLUMNS; EACH CELL HAS AN ID AND AN CALLS AN ONCLICK METHOD WHEN CLICKED>
+<table background = "background.gif" style="width:30%" id = "map">
+  <tr>
+    <th id = "c1" onclick = "select(this.innerHTML, this.id)">1 - available </th>
+    <th id = "c2" onclick = "select(this.innerHTML, this.id)">2 - available </th> 
+    <th id = "c3" onclick = "select(this.innerHTML, this.id)">3 - available </th>
+	<th id = "c4" onclick = "select(this.innerHTML, this.id)">4 - available </th>
+	<th id = "c5" onclick = "select(this.innerHTML, this.id)">5 - available </th>	
+    <th id = "c6" onclick = "select(this.innerHTML, this.id)">6 - available </th>
+    <th id = "c7" onclick = "select(this.innerHTML, this.id)">7 - available </th>
+    <th id = "c8" onclick = "select(this.innerHTML, this.id)">8 - available </th>
+ </tr>
+ <tr>
+	<th id = "c9" onclick = "select(this.innerHTML, this.id)">9 - available </th>
+	<th id = "c10" onclick = "select(this.innerHTML, this.id)">10 - available </th>
+    <th id = "c11" onclick = "select(this.innerHTML, this.id)">11 - available </th>
+    <th id = "c12" onclick = "select(this.innerHTML, this.id)">12 - available </th>
+    <th id = "c13" onclick = "select(this.innerHTML, this.id)">13 - available </th>
+	<th id = "c14" onclick = "select(this.innerHTML, this.id)">14 - available </th>
+	<th id = "c15" onclick = "select(this.innerHTML, this.id)">15 - available </th>
+    <th id = "c16" onclick = "select(this.innerHTML, this.id)">16 - available </th>
+  </tr>
+  <tr>
+    <th id = "c17" onclick = "select(this.innerHTML, this.id)">17 - available </th>
+    <th id = "c18" onclick = "select(this.innerHTML, this.id)">18 - available </th>
+	<th id = "c19" onclick = "select(this.innerHTML, this.id)">19 - available </th>
+	<th id = "c20" onclick = "select(this.innerHTML, this.id)">20 - available </th>
+	<th id = "c21" onclick = "select(this.innerHTML, this.id)">21 - available </th>
+	<th id = "c22" onclick = "select(this.innerHTML, this.id)">22 - available </th>
+	<th id = "c23" onclick = "select(this.innerHTML, this.id)">23 - available </th>
+	<th id = "c24" onclick = "select(this.innerHTML, this.id)">24 - available </th>
+</tr>
+<tr>	
+	<th id = "c25" onclick = "select(this.innerHTML, this.id)">25 - available </th>
+	<th id = "c26" onclick = "select(this.innerHTML, this.id)">26 - available </th>
+	<th id = "c27" onclick = "select(this.innerHTML, this.id)">27 - available </th>
+	<th id = "c28" onclick = "select(this.innerHTML, this.id)">28 - available </th>
+	<th id = "c29" onclick = "select(this.innerHTML, this.id)">29 - available </th>
+	<th id = "c30" onclick = "select(this.innerHTML, this.id)">30 - available </th>
+	<th id = "c31" onclick = "select(this.innerHTML, this.id)">30 - available </th>
+	<th id = "c32" onclick = "select(this.innerHTML, this.id)">30 - available </th>
+
+  </tr>
+ <tr>	
+	<th id = "c33" onclick = "select(this.innerHTML, this.id)">33 - available </th>
+	<th id = "c34" onclick = "select(this.innerHTML, this.id)">34 - available </th>
+	<th id = "c35" onclick = "select(this.innerHTML, this.id)">35 - available </th>
+	<th id = "c36" onclick = "select(this.innerHTML, this.id)">36 - available </th>
+	<th id = "c37" onclick = "select(this.innerHTML, this.id)">37 - available </th>
+	<th id = "c38" onclick = "select(this.innerHTML, this.id)">38 - available </th>
+	<th id = "c39" onclick = "select(this.innerHTML, this.id)">39 - available </th>
+	<th id = "c40" onclick = "select(this.innerHTML, this.id)">40 - available </th>
+
+  </tr>
+ <tr>	
+	<th id = "c41" onclick = "select(this.innerHTML, this.id)">41 - available </th>
+	<th id = "c42" onclick = "select(this.innerHTML, this.id)">42 - available </th>
+	<th id = "c43" onclick = "select(this.innerHTML, this.id)">43 - available </th>
+	<th id = "c44" onclick = "select(this.innerHTML, this.id)">44 - available </th>
+	<th id = "c45" onclick = "select(this.innerHTML, this.id)">45 - available </th>
+	<th id = "c46" onclick = "select(this.innerHTML, this.id)">46 - available </th>
+	<th id = "c47" onclick = "select(this.innerHTML, this.id)">47 - available </th>
+	<th id = "c48" onclick = "select(this.innerHTML, this.id)">48 - available </th>
+
+  </tr>
+ <tr>	
+	<th id = "c49" onclick = "select(this.innerHTML, this.id)">49 - available </th>
+	<th id = "c50" onclick = "select(this.innerHTML, this.id)">50 - available </th>
+	<th id = "c51" onclick = "select(this.innerHTML, this.id)">51 - available </th>
+	<th id = "c52" onclick = "select(this.innerHTML, this.id)">52 - available </th>
+	<th id = "c53" onclick = "select(this.innerHTML, this.id)">53 - available </th>
+	<th id = "c54" onclick = "select(this.innerHTML, this.id)">54 - available </th>
+	<th id = "c55" onclick = "select(this.innerHTML, this.id)">55 - available </th>
+	<th id = "c56" onclick = "select(this.innerHTML, this.id)">56 - available </th>
+
+  </tr>
+
+ 
+  
+  
+  <!GIVES THE USER A CONFIRMATION>
+  <h2 id = "msg"> Welcome to "Staking Your Land", a quick way to claim your mining grounds. Below is a map of land (divided into boxes), for miners like you to lay claims to stake. Please click on a box of land that you would like to claim: </h2>
+  <form>
+		<label for "Yes" > Yes </label>
+		<input type = "radio" onclick = "confirmed()" name = "yesno" value = "choice1" id = "yes">
+		<label for "No"> No </label>
+		<input type = "radio" onclick = "canceled()" name = "yesno" value = "choice2" id = "no">
+		
+	</form>	
+ <!SOME JAVASCRIPT> 
+  <script>
+  
+  var users = JSON.parse(sessionStorage.getItem("unp"));
+  console.log(users[0].names);
+  
+  var cellSelected = 0;
+  var cellSelectedId = "none";
+  
+  //DETERMINES IF THE CELL IS ALREADY OCCUPIED
+  //INITIALIZES THE VARIABLES ABOVE, SO ALL METHODS HAVE ACCESS TO ID AND VALUE
+  function select(text, idcell) {
+	if (cellSelectedId != "none") {
+		document.getElementById(cellSelectedId).style.backgroundColor='transparent';
+	}
+	var cellText = document.getElementById(idcell).innerHTML.toString();
+	console.log(cellText.substring(cellText.length - 1));
+	if (cellText.substring(cellText.length -2 ) == ("e ")){
+		document.getElementById(idcell).style.backgroundColor='yellow';
+		document.getElementById("msg").innerHTML = users[users.length -1].names + ", do you want to stake land marked " + text + "?";
+		cellSelected = text;
+		cellSelectedId = idcell;
+		console.log(cellSelectedId);
+		document.getElementById("yes").checked = false;
+		document.getElementById("no").checked = false;
+	}
+	else {
+		document.getElementById("msg").innerHTML = "The land marked with " + text + " is already taken. White land is available. (Green = Trader, Blue = Miner)";
+	}
+  }
+  
+  
+  //A CONFIRMATION MESSAGE
+  function confirmed() {
+	document.getElementById("confirmMsg").innerHTML = "All right! You have staked land " + cellSelected + "!";
+	if (users[users.length -1].jobs == "miner") {
+		document.getElementById(cellSelectedId).style.backgroundColor='lightblue';
+	}
+	else {
+		document.getElementById(cellSelectedId).style.backgroundColor='lightgreen';
+	}
+	document.getElementById(cellSelectedId).innerHTML = " - occupied by\n" + users[users.length -1].names;
+	document.getElementById("msg").innerHTML = "Please choose land that you would like to stake.";
+	cellSelectedId = "none";
+  }
+  
+  //CANCELED
+  function canceled() {
+	document.getElementById(cellSelectedId).style.backgroundColor='transparent';
+  }
+  
+  </script>
+</table>
+
+<h3 id = "confirmMsg"></h3>
+
+<!LINK TO SHOPPING PAGE>
+<div class = "nextShop">
+<table >
+	<tr >
+		<a onclick = "pushAcct()" id = "shopper" href = "shoppingcartmenu.html"> Shop </a>
+	</tr>
+	
+	<script>
+	function pushAcct() {
+		console.log("testing");
+		sessionStorage.setItem("sUnp", JSON.stringify(users));
+	}
+	</script>
+</table>
+
+</div>
+
+<!CREATES THE LOGOUT-LOGIN TAB>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+</style>
+</head>
+<body>
+
+<h3>Logout</h3>
+<p>Click on the button at the bottom of this page to logout.</p>
+
+<button class="open-button" onclick="openForm()">Logout</button>
+
+<!CREATES THE FIELDS FOR THE USER TO INPUT THEIR ACCOUNT INFO>
+<div class="form-popup" id="myForm">
+  <form class="form-container">
+    <h2>You have successfully logged out.</h2>
+
+    <label for="text"><b>Username</b></label>
+    <input type="text" id = "username" placeholder="Enter Username" name="Username" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" id = "password" placeholder="Enter Password" name="psw" required>
+
+	<table style="width:100%" id = "logouts">
+	<tr>
+		<td>
+			<input type="radio" name="Job" value = "trader">Trader/Seller<!--THESE 2 LINES WITH "RADIO" ARE THE CODING BLOCKS FOR THE TWO LITTLE DOTS THAT YOU CAN CLICK -->
+			<input type="radio" name="Job" value = "miner">Gold Miner
+		</td>
+	</tr>
+	<tr>
+		<th class = "btn" onclick = "createAcct()">Login</th>
+	</tr>
+
+	</table>
+	
+    
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+
+
+<!DECLARES FUNCTIONALITY - OPENS, CLOSES, AND CREATES ACCOUNT>
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+
+function createAcct() {
+	
+	var inp = document.getElementById("username").value;
+	
+	var ele = document.getElementsByName('Job'); 
+	var checkedBox;
+	  
+	for(i = 0; i < ele.length; i++) { 
+		if(ele[i].checked) 
+			checkedBox = ele[i].value; 
+	} 
+
+
+	var len = users.push ({
+		names: inp,
+		passwords: document.getElementById("password").value,
+		jobs: checkedBox
+	});
+	
+	  document.getElementById("myForm").style.display = "none";
+	
+	document.getElementById("msg").innerHTML = "Hello " + users[users.length -1].names + ", please choose land you would like to claim. Land marked in blue (miners) and green (traders) is taken.";
+}
+</script>
+
+</body>
+
+
+
+</html>
